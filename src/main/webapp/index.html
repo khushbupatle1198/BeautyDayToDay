@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeautyDayToDay</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Beauty<span>DayToDay</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    
+    <!-- Banner section --> 
+<section class="banner">
+<div class="banner-image">
+ <img src="images/Expo1.png" alt="Banner Image" class="banner-image">
+ </div>
+  <div class="banner-content">
+  
+    <button class="book-btn" id="bannerBookBtn">Book Tickets Now</button>
+  </div>
+</section>
+
+
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Register for Event</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+              
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="event">Select Event</label>
+                    <select id="event" required>
+                        <option value="">-- Select Event --</option>
+                        <option value="Entry">Entry</option>
+                        <option value="bridal-makeup">Bridal Makeup Competition</option>
+                        <option value="bridal-mehendi">Bridal Mehendi Competition</option>
+                        <option value="hair-cutting">Hair Cutting Competition</option>
+                        <option value="back-stage">Back Stage Pass</option>
+                        <option value="trophy-dist">Awards & Trophy</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="tickets">Number of Tickets</label>
+                    <input type="number" id="tickets" min="1" value="1" required>
+                </div>
+                <div class="payment-qr">
+                    <p>Scan QR Code to Pay</p>
+                    <img src="images/qr-code.png" alt="Payment QR Code">
+                    <p>Amount: ₹99 Entry ticket per ticket</p>
+                </div>
+                <button type="submit" class="submit-btn">Submit Registration</button>
+            </form>
+        </div>
+    </div>
+
+   <!-- About Us Section -->
+<section id="about" style="padding: 60px 20px; background-color: #fdfdfd;">
+    <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 0 auto;">
+        
+        <!-- Image Side -->
+        <div style="flex: 1; min-width: 300px;">
+            <img src="images/msir.JPG" alt="Beauty Event" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+        </div>
+
+        <!-- Text Side -->
+        <div style="flex: 1; min-width: 300px;">
+            <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: #333;">About Our Events</h2>
+           <h2>About Beauty Day To Day</h2>
+  <ul>
+    <li><strong>Beauty Day to Day</strong> and <strong>Orange City Hair and Beauty Lab</strong> are led by Director Mr. Pradeep Markadkar.</li>
+    <li>He has been working in the beauty industry for the past 20 years.</li>
+    <li>He has organized over 500 seminars, workshops, and award events across Maharashtra and Chhattisgarh.</li>
+    <li>He promotes, markets, and brands various cosmetic brands and beauty professionals.</li>
+    <li>He is also actively involved in women empowerment initiatives.</li>
+    <li>He is working to develop a group of cosmetic companies and products.</li>
+    <li>He has designed a unique system keeping in mind the strong relationship between customer and company.</li>
+    <li>Beauty Day to Day is recognized as a trusted name in the salon industry.</li>
+    <li>He conducts workshops and seminars in various cities across India and abroad.</li>
+    <li>Aims to make Indian traditional and modern beauty salon products a valuable part of the global cosmetic market.</li>
+    <li>He manages the company professionally and specializes in the Indian cosmetic industry.</li>
+    <li>Constantly introduces new products while maintaining high quality standards.</li>
+    <li>Provides career guidance and complete planning for youth and new talent.</li>
+    <li>Over 100 youths have started their own businesses with his support and guidance.</li>
+    <li>Through Orange City Hair and Beauty Lab, he provides high-level professional training to new beauty professionals.</li>
+  </ul>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Competitions Section -->
+    <section class="competitions">
+        <h2>Our Competitions</h2>
+        <div class="competition-cards">
+          <!-- Entry Card -->
+		<div class="card">
+    		<img src="images/expo.webp" alt="Entry Pass">
+    		<h3>Entry Pass</h3>
+    		<p>Be part of the audience and experience the glamour of our competitions live.</p>
+   			<p class="date">Date: 21 & 22 JULY 2025</p>
+   			<button class="book-btn competition-book">Book Now</button>
+		</div>
+          
+            <!-- Bridal Makeup Card -->
+            <div class="card">
+                <img src="images/expo.webp" alt="Bridal Makeup">
+                <h3>Bridal Makeup Competition</h3>
+                <p>Showcase your bridal makeup artistry skills and win exciting prizes.</p>
+                <p class="date">Date: 21 & 22 JULY 2025</p>
+                <button class="book-btn competition-book">Book Now</button>
+            </div>
+            
+            <!-- Bridal Mehendi Card -->
+            <div class="card">
+                <img src="images/expo.webp" alt="Bridal Mehendi">
+                <h3>Bridal Mehendi Competition</h3>
+                <p>Demonstrate intricate mehendi designs for bridal occasions.</p>
+                <p class="date">Date: 21 & 22 JULY 2025</p>
+                <button class="book-btn competition-book">Book Now</button>
+            </div>
+            
+            <!-- Hair Cutting Card -->
+            <div class="card">
+                <img src="images/expo.webp" alt="Hair Cutting">
+                <h3>Hair Cutting Competition</h3>
+                <p>Show your precision and creativity in hair cutting techniques.</p>
+                <p class="date">Date: 21 & 22 JULY 2025</p>
+                <button class="book-btn competition-book">Book Now</button>
+            </div>
+            
+            <!-- Back Stage Card -->
+            <div class="card">
+                <img src="images/expo.webp" alt="Back Stage">
+                <h3>Back Stage Pass</h3>
+                <p>Exclusive access to behind-the-scenes of our competitions.</p>
+                <p class="date">Date: 21 & 22 JULY 2025</p>
+                <button class="book-btn competition-book">Book Now</button>
+            </div>
+            
+            <!-- Trophy Distribution Card -->
+            <div class="card">
+                <img src="images/expo.webp" alt="Trophy Distribution">
+                <h3>Trophy Distribution</h3>
+                <p>Celebrate the winners at our grand trophy distribution ceremony.</p>
+                <p class="date">Date: 21 & 22 JULY 2025</p>
+                <button class="book-btn competition-book">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview -->
+    <section class="gallery-preview">
+        <h2>Event Gallery</h2>
+        <div class="gallery-images">
+            <img src="images/mg5.webp" alt="Event Photo 1">
+            <img src="images/expog2.jpg" alt="Event Photo 2">
+            <img src="images/expog3.JPG" alt="Event Photo 3">
+            <img src="images/mg7.webp" alt="Event Photo 4">
+            <img src="images/mg6.webp" alt="Event Photo 5">
+            <img src="images/expog4.JPG" alt="Event Photo 6">
+        </div>
+        <a href="gallery.html" class="view-more">View Full Gallery</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About BeautyComp</h3>
+                <p>Organizing premier beauty competitions since 2005, showcasing talent and creativity in the beauty industry.</p>
+                <div class="socials">
+                    <a href="https://www.facebook.com/p/beauty_day_to_day-100084210906206/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/beauty_day_to_day"><i class="fab fa-instagram"></i></a>
+                  
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i>13 Prayag Dakshinamurthy sq., mahal , Nagpur, Maharashtra, India 440032</p>
+                <p><i class="fas fa-phone"></i> +91 9552558083</p>
+                <p><i class="fas fa-envelope"></i>beautydaytoday8@gmail.com</p>
+            </div>
+            <div class="footer-section admin">
+                <h3>Admin Tools</h3>
+                <button id="exportBtn" class="admin-btn export-btn">Export to Excel</button>
+             
+                <p id="dataCount">0 submissions</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 BeautyDayToDay| Designed by Your Company
+        </div>
+    </footer>
+
+    <script src="https://cdn.sheetjs.com/xlsx-0.19.3/package/dist/xlsx.full.min.js"></script>
+    <script src="scripts/script.js"></script>
+ 
+
+
+  
+<!-- Add this before the footer -->
+<div class="modal" id="passwordModal">
+    <div class="modal-content" style="max-width: 400px;">
+        <span class="close-btn">&times;</span>
+        <h2>Admin Access Required</h2>
+        <form id="passwordForm">
+            <div class="form-group">
+                <label for="adminPassword">Enter Admin Password</label>
+                <input type="password" id="adminPassword" required>
+                <p id="passwordError" style="color: red; display: none;">Incorrect password</p>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</div>
+    
+</body>
+</html>

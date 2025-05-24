@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Beauty Competitions</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+   <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Beauty<span>DayToDay</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- About Us Banner -->
+    <section class="page-banner">
+     <img src="images/Expo1.png" alt="Banner Image" class="banner-image">
+        <div class="banner-content">
+            <h1>About Us</h1>
+            <p>Learn more about our organization and mission</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-page">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>Founded in 2010, BeautyComp has grown from a small local competition to one of the most prestigious beauty event organizers in the country. Our journey began with a simple vision: to create a platform where beauty professionals could showcase their talent and creativity.</p>
+                    <p>Over the years, we've expanded our events to include multiple categories, attracting participants and audiences from across the globe. Our competitions are known for their high standards, fair judging, and opportunities for winners to advance their careers.</p>
+                    
+                    <h2>Our Mission</h2>
+                    <p>Our mission is to elevate the beauty industry by recognizing and rewarding exceptional talent. We aim to:</p>
+                    <ul>
+                        <li>Provide a fair and professional platform for competition</li>
+                        <li>Promote innovation and creativity in beauty techniques</li>
+                        <li>Connect talented professionals with industry opportunities</li>
+                        <li>Educate and inspire the next generation of beauty experts</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="images/expog1.jpg" alt="Our Team">
+                </div>
+            </div>
+            
+            <div class="team-section">
+                <h2>Meet Our Team</h2>
+                <div class="team-members">
+                    <div class="team-member">
+                        <img src="images/team1.jpg" alt="Team Member">
+                        <h3>Priya Sharma</h3>
+                        <p>Founder & CEO</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/team2.jpg" alt="Team Member">
+                        <h3>Rahul Kapoor</h3>
+                        <p>Event Director</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/team3.jpg" alt="Team Member">
+                        <h3>Anjali Patel</h3>
+                        <p>Head Judge</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About BeautyComp</h3>
+                <p>Organizing premier beauty competitions since 2005, showcasing talent and creativity in the beauty industry.</p>
+                <div class="socials">
+                    <a href="https://www.facebook.com/p/beauty_day_to_day-100084210906206/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/beauty_day_to_day"><i class="fab fa-instagram"></i></a>
+                  
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i>13 Prayag Dakshinamurthy sq., mahal , Nagpur, Maharashtra, India 440032</p>
+                <p><i class="fas fa-phone"></i> +91 9552558083</p>
+                <p><i class="fas fa-envelope"></i>beautydaytoday8@gmail.com</p>
+            </div>
+            <div class="footer-section admin">
+                <h3>Admin Tools</h3>
+                <button id="exportBtn" class="admin-btn export-btn">Export to Excel</button>
+             
+                <p id="dataCount">0 submissions</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 BeautyDayToDay| Designed by Your Company
+        </div>
+    </footer>
+
+    <script src="https://cdn.sheetjs.com/xlsx-0.19.3/package/dist/xlsx.full.min.js"></script>
+    <script src="scripts/script.js"></script>
+ 
+
+
+  
+<!-- Add this before the footer -->
+<div class="modal" id="passwordModal">
+    <div class="modal-content" style="max-width: 400px;">
+        <span class="close-btn">&times;</span>
+        <h2>Admin Access Required</h2>
+        <form id="passwordForm">
+            <div class="form-group">
+                <label for="adminPassword">Enter Admin Password</label>
+                <input type="password" id="adminPassword" required>
+                <p id="passwordError" style="color: red; display: none;">Incorrect password</p>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
