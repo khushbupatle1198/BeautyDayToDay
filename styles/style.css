@@ -31,7 +31,6 @@ body {
 }
 
 .btn, button {
-	
     background-color: var(--primary-color);
     color: var(--white-color);
     border: none;
@@ -88,7 +87,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
+    padding: 15px 30px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -99,7 +98,7 @@ section {
 }
 
 .navbar.scrolled {
-    padding: 8px 30px;
+    padding: 10px 30px;
     background-color: rgba(255, 255, 255, 0.95);
 }
 
@@ -166,16 +165,15 @@ section {
 .banner {
     position: relative;
     width: 100%;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
+    min-height: 500px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding-top: 80px;
-     height: calc(100vh - 60px); /* Reduce height due to smaller navbar */
-    padding-top: 150px; /* Match the reduced navbar height */
-   
+    margin-top: 60px;
 }
 
 .banner-image {
@@ -184,46 +182,70 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image fills the container */
-    z-index: -1; /* Sends image to the background */
+    object-fit: cover;
+    z-index: -1;
 }
 
 .banner-content {
     position: relative;
     z-index: 1;
-     padding-top: 190px; 
+    padding: 0 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
-
 
 .banner h1 {
     font-size: 48px;
     margin-bottom: 20px;
     color: var(--white-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .banner p {
     font-size: 20px;
     margin-bottom: 30px;
+    color: var(--white-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Page Banner */
 .page-banner {
-    height: 80vh;
-   /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/Expo3.png') no-repeat center center/cover;
-  */ display: flex;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
     color: var(--white-color);
     padding-top: 80px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.page-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .page-banner h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .page-banner p {
     font-size: 20px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Modal Styles */
@@ -423,7 +445,7 @@ section {
 /* Competitions Section */
 .competition-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
@@ -433,6 +455,7 @@ section {
     overflow: hidden;
     box-shadow: var(--box-shadow);
     transition: all 0.3s ease;
+    margin-bottom: 30px;
 }
 
 .card:hover {
@@ -531,7 +554,7 @@ section {
 
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -774,6 +797,14 @@ section {
 }
 
 /* Responsive Styles */
+@media (max-width: 1200px) {
+    .competition-cards,
+    .gallery-container,
+    .gallery-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 992px) {
     .section-title h2 {
         font-size: 32px;
@@ -786,11 +817,20 @@ section {
     .banner p, .page-banner p {
         font-size: 18px;
     }
+    
+    .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .about-image {
+        order: -1;
+    }
 }
 
 @media (max-width: 768px) {
     .navbar {
-        padding: 15px 30px;
+        padding: 15px 20px;
     }
     
     .nav-links {
@@ -811,7 +851,7 @@ section {
     }
     
     .nav-links li {
-        margin: 20px 0;
+        margin: 15px 0;
     }
     
     .burger {
@@ -833,32 +873,12 @@ section {
     .section-title h2 {
         font-size: 28px;
     }
-   .banner {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-}
-
-.banner-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
-.banner-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  color: white;
-  padding-top: 100px;
-}
     
-    
+    .banner {
+        height: 70vh;
+        min-height: 400px;
+        margin-top: 70px;
+    }
     
     .banner h1, .page-banner h1 {
         font-size: 36px;
@@ -868,26 +888,30 @@ section {
         font-size: 16px;
     }
     
-    .competition-cards, .gallery-container {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    .page-banner {
+        height: 50vh;
+        min-height: 350px;
     }
     
+    .competition-cards,
+    .gallery-container,
     .gallery-images {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .about-grid, .contact-grid {
         grid-template-columns: 1fr;
     }
     
-    .about-image {
-        order: -1;
+    .modal-content {
+        width: 95%;
+        padding: 20px;
     }
 }
 
 @media (max-width: 576px) {
     .navbar {
-        padding: 15px 20px;
+        padding: 12px 15px;
+    }
+    
+    .logo {
+        font-size: 24px;
     }
     
     .section-title h2 {
@@ -898,20 +922,34 @@ section {
         font-size: 30px;
     }
     
-    .modal-content {
-        width: 95%;
-        padding: 20px;
+    .banner p, .page-banner p {
+        font-size: 15px;
     }
     
-    .competition-cards, .gallery-container {
-        grid-template-columns: 1fr;
+    .btn, button {
+        padding: 10px 20px;
+        font-size: 13px;
     }
     
-    .gallery-images {
-        grid-template-columns: 1fr;
+    section {
+        padding: 60px 0;
     }
     
     .footer-content {
         grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .socials {
+        justify-content: center;
+    }
+    
+    .footer-section.contact p {
+        justify-content: center;
     }
 }
