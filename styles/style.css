@@ -223,7 +223,7 @@ section {
     text-align: center;
     color: var(--white-color);
     padding-top: 80px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     position: relative;
     overflow: hidden;
     background-size: cover;
