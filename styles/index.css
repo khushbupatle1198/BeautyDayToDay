@@ -122,15 +122,15 @@ section {
 .banner {
     position: relative;
     width: 100%;
-    height: auto; /* Changed from fixed height to auto */
-    min-height: 300px; /* Minimum height for smaller screens */
+    height: auto;
+    min-height: 200px; /* Reduced from 300px */
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 80px;
-    margin-bottom: 40px;
+    padding-top: 80px; /* This accounts for fixed navbar */
+    margin-bottom: 20px; /* Reduced from 40px */
 }
 
 .banner-image {
@@ -173,7 +173,7 @@ section {
 
 /* About Section */
 #about {
-    padding: 60px 20px;
+    padding: 30px 20px; /* Reduced from 60px 20px */
     background-color: #fdfdfd;
 }
 
@@ -499,11 +499,21 @@ section {
     }
 
     .banner {
-        height: 70vh;
+        height: auto; /* Changed from 70vh to auto for better control */
+        min-height: 180px; /* New optimized value */
+        margin-bottom: 15px; /* Reduced space */
     }
 
     .banner h1 {
         font-size: 2.5rem;
+    }
+
+    .banner-content {
+        padding: 10px;
+    }
+
+    #about {
+        padding: 25px 20px; /* Reduced padding */
     }
 
     .gallery-images {
@@ -513,30 +523,34 @@ section {
 
 @media (max-width: 576px) {
     .banner {
-        height: 60vh;
-        min-height: 300px;
+        height: auto; /* Changed from 60vh to auto */
+        min-height: 150px; /* New optimized value */
+        margin-bottom: 10px; /* Minimal bottom margin */
     }
 
     .banner h1 {
         font-size: 2rem;
     }
 
-    .gallery-images {
-        grid-template-columns: 1fr;
+    .banner-content {
+        padding: 5px;
+        width: 95%;
+    }
+
+    .book-btn {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    #about {
+        padding: 20px 15px; /* More compact for mobile */
     }
 
     #about > div {
         flex-direction: column;
     }
-}
 
-@media (max-width: 768px) {
-    .banner {
-        min-height: 250px;
-        margin-bottom: 30px;
-    }
-    
-    .banner-content {
-        padding: 10px;
+    .gallery-images {
+        grid-template-columns: 1fr;
     }
 }
