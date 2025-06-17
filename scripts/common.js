@@ -1,11 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     let formSubmissions = [];
-    const whatsappNumber = '9552558083'; // ✅ Configurable WhatsApp number
-
-    // Only run export-related code on index page
-    const isIndexPage = window.location.pathname.endsWith('index.html') || 
-                       window.location.pathname.endsWith('/') || 
-                       window.location.pathname === '';
+    const whatsappNumber = '9552558083'; // Configurable WhatsApp number
 
     // ========== DATA MANAGEMENT FUNCTIONS ==========
     function loadFormData() {
@@ -28,8 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const counter = document.getElementById('dataCount');
         if (counter) {
             counter.textContent = `${formSubmissions.length} submission${formSubmissions.length !== 1 ? 's' : ''}`;
-            // Hide counter on non-index pages
-            if (!isIndexPage) counter.style.display = 'none';
         }
     }
 
@@ -151,91 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ========== EXPORT FUNCTIONALITY (INDEX PAGE ONLY) ==========
-    if (isIndexPage) {
-        const exportBtn = document.getElementById("exportBtn");
-        const passwordModal = document.getElementById("passwordModal");
-        const passwordForm = document.getElementById("passwordForm");
-        const adminPasswordInput = document.getElementById("adminPassword");
-        const passwordError = document.getElementById("passwordError");
-        const closeBtns = document.querySelectorAll(".close-btn");
-        const correctPassword = "admin123"; // Set your password
-
-        function getSavedSubmissions() {
-            const saved = localStorage.getItem('formSubmissions');
-            if (!saved) return [];
-
-            return JSON.parse(saved).map(item => {
-                return {
-                    Name: item.name || '',
-                    Phone: item.phone || '',
-                    Event: item.eventName || item.event || '',
-                    Tickets: item.tickets || '',
-                    Type: item.type || '',
-                    Date: item.timestamp ? new Date(item.timestamp).toLocaleDateString() : ''
-                };
-            });
-        }
-
-        function exportToExcel() {
-            const submissions = getSavedSubmissions();
-
-            if (submissions.length === 0) {
-                alert('No submissions to export.');
-                return;
-            }
-
-            const worksheet = XLSX.utils.json_to_sheet(submissions);
-            const workbook = XLSX.utils.book_new();
-            XLSX.utils.book_append_sheet(workbook, worksheet, "Registrations");
-
-            const fileName = `BeautyDayToDay_Registrations_${new Date().toISOString().slice(0, 10)}.xlsx`;
-            XLSX.writeFile(workbook, fileName);
-        }
-
-        if (exportBtn) {
-            exportBtn.addEventListener("click", () => {
-                passwordModal.style.display = "block";
-            });
-        }
-
-        if (closeBtns) {
-            closeBtns.forEach(btn => {
-                btn.addEventListener("click", () => {
-                    if (passwordModal) passwordModal.style.display = "none";
-                    if (passwordError) passwordError.style.display = "none";
-                    if (adminPasswordInput) adminPasswordInput.value = "";
-                });
-            });
-        }
-
-        if (passwordForm) {
-            passwordForm.addEventListener("submit", function (e) {
-                e.preventDefault();
-                const enteredPassword = adminPasswordInput.value;
-
-                if (enteredPassword === correctPassword) {
-                    passwordModal.style.display = "none";
-                    passwordError.style.display = "none";
-                    adminPasswordInput.value = "";
-                    exportToExcel();
-                } else {
-                    passwordError.style.display = "block";
-                }
-            });
-        }
-    } else {
-        // Hide export elements on non-index pages
-        const exportBtn = document.getElementById("exportBtn");
-        const dataCount = document.getElementById("dataCount");
-        if (exportBtn) exportBtn.style.display = "none";
-        if (dataCount) dataCount.style.display = "none";
-    }
-
-    // ========== INITIALIZATION ==========
-    loadFormData();
-
-    // Smooth scrolling for anchors
+    // ========== SMOOTH SCROLLING ==========
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -250,4 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // ========== INITIALIZATION ==========
+    loadFormData();
 });
