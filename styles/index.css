@@ -122,35 +122,34 @@ section {
 .banner {
     position: relative;
     width: 100%;
-    height: auto; /* Changed from fixed height to auto */
-    min-height: 300px; /* Minimum height for smaller screens */
+    height: 100vh;
+    min-height: 400px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding-top: 80px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 .banner-image {
-    position: relative; /* Changed from absolute to relative */
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Changed from cover to contain to show full image */
+    height: 100%;
+    object-fit: cover;
     z-index: -1;
 }
 
 .banner-content {
-    position: absolute;
+    position: relative;
     z-index: 1;
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .banner h1 {
@@ -511,26 +510,6 @@ section {
     }
 }
 
-@media (max-width: 576px) {
-    .banner {
-        height: 60vh;
-        min-height: 300px;
-    }
-
-    .banner h1 {
-        font-size: 2rem;
-    }
-
-    .gallery-images {
-        grid-template-columns: 1fr;
-    }
-
-    #about > div {
-        flex-direction: column;
-    }
-}
-
-/* Adjust the banner image height for different screen sizes */
 @media (max-width: 768px) {
     .banner {
         min-height: 250px;
@@ -539,5 +518,20 @@ section {
     
     .banner-content {
         padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner {
+        min-height: 200px;
+        margin-bottom: 20px;
+    }
+    
+    .banner h1 {
+        font-size: 1.8rem;
+    }
+    
+    .banner p {
+        font-size: 1rem;
     }
 }
