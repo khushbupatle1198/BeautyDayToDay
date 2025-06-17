@@ -510,3 +510,21 @@ section {
     }
 }
 
+@media (max-width: 576px) {
+    .banner {
+        height: 60vh;
+        min-height: 300px;
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .gallery-images {
+        grid-template-columns: 1fr;
+    }
+
+    #about > div {
+        flex-direction: column;
+    }
+}
