@@ -212,9 +212,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Open password modal
-    exportBtn.addEventListener("click", function () {
-        passwordModal.style.display = "block";
-    });
+	// Only show the export button on index.html
+	document.addEventListener("DOMContentLoaded", () => {
+	    const currentPage = window.location.pathname.split("/").pop();
+
+	    if (currentPage !== "" && currentPage !== "index.html") {
+	        const exportBtn = document.getElementById("exportBtn");
+	        const dataCount = document.getElementById("dataCount");
+
+	        if (exportBtn) exportBtn.style.display = "none";
+	        if (dataCount) dataCount.style.display = "none";
+	    }
+	});
+
 
     // Close modal buttons
     closeBtns.forEach(btn => {
