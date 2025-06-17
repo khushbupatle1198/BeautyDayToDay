@@ -122,34 +122,35 @@ section {
 .banner {
     position: relative;
     width: 100%;
-    height: 100vh;
-    min-height: 400px;
+    height: auto; /* Changed from fixed height to auto */
+    min-height: 300px; /* Minimum height for smaller screens */
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding-top: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .banner-image {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative; /* Changed from absolute to relative */
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Changed from cover to contain to show full image */
     z-index: -1;
 }
 
 .banner-content {
-    position: relative;
+    position: absolute;
     z-index: 1;
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .banner h1 {
@@ -526,5 +527,17 @@ section {
 
     #about > div {
         flex-direction: column;
+    }
+}
+
+/* Adjust the banner image height for different screen sizes */
+@media (max-width: 768px) {
+    .banner {
+        min-height: 250px;
+        margin-bottom: 30px;
+    }
+    
+    .banner-content {
+        padding: 10px;
     }
 }
