@@ -510,28 +510,3 @@ section {
     }
 }
 
-@media (max-width: 768px) {
-    .banner {
-        min-height: 200px;
-        margin-bottom: 30px;
-    }
-    
-    .banner-content {
-        padding: 10px;
-    }
-}
-
-@media (max-width: 576px) {
-    .banner {
-        min-height: 200px;
-        margin-bottom: 20px;
-    }
-    
-    .banner h1 {
-        font-size: 1.8rem;
-    }
-    
-    .banner p {
-        font-size: 1rem;
-    }
-}
