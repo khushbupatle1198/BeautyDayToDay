@@ -512,7 +512,7 @@ section {
 
 @media (max-width: 768px) {
     .banner {
-        min-height: 250px;
+        min-height: 200px;
         margin-bottom: 30px;
     }
     
