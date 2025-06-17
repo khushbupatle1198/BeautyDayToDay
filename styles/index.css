@@ -130,7 +130,7 @@ section {
     justify-content: center;
     text-align: center;
     padding-top: 80px; /* This accounts for fixed navbar */
-    margin-bottom: 20px; /* Reduced from 40px */
+    margin-bottom: 30px; /* Reduced from 40px */
 }
 
 .banner-image {
@@ -173,7 +173,7 @@ section {
 
 /* About Section */
 #about {
-    padding: 30px 20px; /* Reduced from 60px 20px */
+    padding: 40px 20px; /* Reduced from 60px 20px */
     background-color: #fdfdfd;
 }
 
@@ -501,7 +501,7 @@ section {
     .banner {
         height: auto; /* Changed from 70vh to auto for better control */
         min-height: 180px; /* New optimized value */
-        margin-bottom: 15px; /* Reduced space */
+        margin-bottom: 25px; /* Reduced space */
     }
 
     .banner h1 {
@@ -513,7 +513,7 @@ section {
     }
 
     #about {
-        padding: 25px 20px; /* Reduced padding */
+        padding: 35px 20px; /* Reduced padding */
     }
 
     .gallery-images {
@@ -525,7 +525,7 @@ section {
     .banner {
         height: auto; /* Changed from 60vh to auto */
         min-height: 150px; /* New optimized value */
-        margin-bottom: 10px; /* Minimal bottom margin */
+        margin-bottom: 20px; /* Minimal bottom margin */
     }
 
     .banner h1 {
@@ -533,7 +533,7 @@ section {
     }
 
     .banner-content {
-        padding: 5px;
+        padding: 8px;
         width: 95%;
     }
 
