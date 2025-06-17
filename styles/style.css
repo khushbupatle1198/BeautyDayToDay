@@ -916,9 +916,13 @@ section {
         grid-template-columns: 1fr;
     }
     
-    .about-image {
-        order: -1;
-    }
+   .about-image {
+    order: -1; /* Moves image above the text */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (max-width: 576px) {
