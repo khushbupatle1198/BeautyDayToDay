@@ -309,8 +309,9 @@ body {
     }
 }
 
-/* Responsive Styles */
+/* Updated Responsive Styles - Merged Approach */
 @media (max-width: 768px) {
+    /* Navigation Styles (keep existing) */
     .nav-links {
         position: fixed;
         top: 80px;
@@ -323,43 +324,55 @@ body {
         justify-content: center;
         transition: all 0.5s ease;
     }
-
     .nav-links.active {
         left: 0;
     }
-
     .nav-links li {
         margin: 20px 0;
     }
-
     .burger {
         display: block;
     }
 
+    /* Updated Banner Styles */
     .page-banner {
-        height: 50vh;
+        height: auto; /* Changed from 50vh to auto */
+        min-height: 250px; /* Added for better control */
+        margin-bottom: 25px; /* Added consistent spacing */
     }
-
     .page-banner h1 {
         font-size: 2.5rem;
     }
+    .page-banner p {
+        font-size: 1.1rem; /* Added for consistency */
+    }
 
+    /* About Section Layout */
     .about-grid {
         grid-template-columns: 1fr;
     }
-
     .about-image {
         order: -1;
     }
 }
 
 @media (max-width: 576px) {
+    /* Further Mobile Optimization */
     .page-banner {
-        height: 40vh;
-        min-height: 300px;
+        height: auto; /* Changed from 40vh to auto */
+        min-height: 200px; /* Adjusted from 300px */
+        margin-bottom: 20px; /* Added consistent spacing */
     }
-
     .page-banner h1 {
         font-size: 2rem;
+    }
+    .page-banner p {
+        font-size: 1rem; /* Added for consistency */
+    }
+    
+    /* Banner Content Adjustment */
+    .banner-content {
+        padding: 10px; /* Better mobile padding */
+        width: 95%; /* More edge space */
     }
 }
